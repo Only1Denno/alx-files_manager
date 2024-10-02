@@ -1,27 +1,33 @@
-Simple File Management API using Express, MongoDB, Redis, Bull, and Node.js
-Requirements
+A simple file management API developed using Express, MongoDB, Redis, Bull, and Node.js.
+
+Prerequisites
 Applications:
+
 Node.js
-Yarn (package manager/resource handler)
+Yarn (package manager)
 APIs:
-Set up a Google API with at least the email sending scope. Ensure that a valid redirect URI (e.g., http://localhost:5000/) is listed, and store the credentials.json file in the project's root directory.
-Environment Variables:
-Define the required environment variables in a .env file, formatted as NAME=VALUE. Below is a table of the environment variables used by the server:
+
+Create a Google API with at least the email sending scope. Include a valid redirect URI, such as http://localhost:5000/.
+Store the credentials.json file in the project’s root directory.
+Environment Variables
+Environment variables should be stored in a .env file, formatted as Name=Value. The table below outlines the variables required by the server:
+
 Name	Required	Description
-GOOGLE_MAIL_SENDER	Yes	Email address for sending emails to users.
-PORT	No	Server port (Default: 5000).
-DB_HOST	No	Database host (Default: localhost).
-DB_PORT	No	Database port (Default: 27017).
-DB_DATABASE	No	Database name (Default: files_manager).
-FOLDER_PATH	No	Path to the folder where files are saved. Default: /tmp/files_manager for Linux/Mac OS X, or %TEMP%/files_manager for Windows.
+GOOGLE_MAIL_SENDER	Yes	Email address responsible for sending emails to users.
+PORT	No (Default: 5000)	Server port to listen on.
+DB_HOST	No (Default: localhost)	Database host address.
+DB_PORT	No (Default: 27017)	Database port.
+DB_DATABASE	No (Default: files_manager)	Name of the database.
+FOLDER_PATH	No (Default: /tmp/files_manager (Linux, macOS) or %TEMP%/files_manager (Windows))	Directory to store files locally.
 Installation
-Clone the repository and navigate to its directory.
+Clone the repository and navigate to the project directory.
 Install dependencies using yarn install or npm install.
 Usage
-Ensure Redis and MongoDB are running on your system.
-Start the server using yarn start-server or npm run start-server.
+Ensure Redis and MongoDB services are running on your system.
+Start the server by running yarn start-server or npm run start-server.
 Testing
-Create a separate .env.test file for testing purposes with the appropriate environment variable values.
-Run tests using yarn test or npm run test to perform end-to-end (E2E) tests.
-Authors
+Create a .env.test file for test environment variables.
+Run the end-to-end tests with yarn test or npm run test.
+Author
 Dennis Deng
+
